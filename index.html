@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sai Lab — AI, Drone & Creative Research Studio</title>
+  <meta name="description" content="Sai Lab is a cinematic portfolio website for AI research, drone systems, software, and creative technology." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-outline" aria-hidden="true"></div>
+
+  <div class="hand-panel" aria-label="Hand cursor controls">
+    <button id="handToggle" class="hand-toggle" type="button">Enable hand cursor</button>
+    <span id="handStatus">Hand mode: off</span>
+    <div class="hand-preview" aria-hidden="true">
+      <video id="handVideo" playsinline></video>
+      <canvas id="handCanvas"></canvas>
+    </div>
+    <div class="hand-settings">
+      <label for="scrollSensitivity">Scroll sensitivity <span id="scrollHint">Scroll: two fingers, then move wrist up/down</span></label>
+      <input id="scrollSensitivity" type="range" min="1" max="10" value="6" />
+    </div>
+    <p><strong>Gestures:</strong> 1 finger moves cursor, pinch clicks, 2 fingers enter scroll mode. In scroll mode, move your wrist slowly up/down or hold near the top/bottom of the dotted box for auto-scroll.</p>
+  </div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Sai Lab home">
+      <span class="brand-mark">SL</span>
+      <span class="brand-text">Sai Lab</span>
+    </a>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="#video">AI</a>
+      <a href="#drone">Drone</a>
+      <a href="#design">Design</a>
+      <a href="#studio">Studio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="menu-button" aria-label="Open menu">Menu</button>
+  </header>
+
+  <aside class="side-left" aria-hidden="true">
+    <span>USA</span>
+    <span class="line"></span>
+    <span>AI • UAV • Software</span>
+  </aside>
+
+  <aside class="side-right" aria-hidden="true">
+    <span>Scroll</span>
+    <span class="scroll-line"></span>
+  </aside>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-visual">
+        <div class="orb orb-one"></div>
+        <div class="orb orb-two"></div>
+        <div class="glass-card floating-card">
+          <span>Research Studio</span>
+          <strong>AI Mission Systems</strong>
+        </div>
+        <div class="grid-sphere" aria-hidden="true"></div>
+      </div>
+      <div class="hero-content">
+        <p class="eyebrow">Independent research & creative technology studio</p>
+        <h1 id="hero-title">AI-powered<br><span>mission ideas</span><br>built for impact.</h1>
+        <p class="hero-copy">Sai Lab designs cinematic digital experiences, research prototypes, drone concepts, and software stories for modern technology audiences.</p>
+        <div class="hero-actions">
+          <a href="#studio" class="btn primary">Explore studio</a>
+          <a href="#contact" class="btn ghost">Start a project</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="marquee" aria-label="Services marquee">
+      <div class="marquee-track">
+        <span>AI Research</span><span>Drone Systems</span><span>Software</span><span>Brand Stories</span><span>Visual Design</span><span>Cybersecurity</span>
+        <span>AI Research</span><span>Drone Systems</span><span>Software</span><span>Brand Stories</span><span>Visual Design</span><span>Cybersecurity</span>
+      </div>
+    </section>
+
+    <section class="services" id="studio" aria-label="Studio services">
+      <article class="service-card" id="video">
+        <div class="service-image image-ai" role="img" aria-label="Abstract AI neural visual"></div>
+        <div class="service-text">
+          <span class="number">01</span>
+          <h2>AI Research</h2>
+          <p>Research storytelling, technical manuscripts, prototypes, dashboards, and high-impact visuals for AI, cybersecurity, and mission assurance.</p>
+          <a href="#contact" class="learn-link">Enquire +</a>
+        </div>
+      </article>
+
+      <article class="service-card reverse" id="drone">
+        <div class="service-image image-drone" role="img" aria-label="Drone flying over cinematic city lights"></div>
+        <div class="service-text">
+          <span class="number">02</span>
+          <h2>Drone & UAV</h2>
+          <p>Concept visuals, simulation narratives, UAV swarm research branding, and cinematic content for autonomous systems and defense technology.</p>
+          <a href="#contact" class="learn-link">Enquire +</a>
+        </div>
+      </article>
+
+      <article class="service-card" id="design">
+        <div class="service-image image-design" role="img" aria-label="Premium design studio interface mockups"></div>
+        <div class="service-text">
+          <span class="number">03</span>
+          <h2>Design</h2>
+          <p>Landing pages, research portfolios, social media creatives, personal branding, posters, YouTube Shorts visuals, and startup-style interfaces.</p>
+          <a href="#contact" class="learn-link">Enquire +</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="portfolio" aria-labelledby="work-title">
+      <p class="eyebrow">Selected directions</p>
+      <h2 id="work-title">Built like a creative lab. Presented like a premium studio.</h2>
+      <div class="work-grid">
+        <div class="work-item"><span>01</span><strong>Research Websites</strong></div>
+        <div class="work-item"><span>02</span><strong>AI Product Pages</strong></div>
+        <div class="work-item"><span>03</span><strong>UAV Dashboards</strong></div>
+        <div class="work-item"><span>04</span><strong>Cinematic Campaigns</strong></div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h2 id="contact-title">Let’s create your next digital identity.</h2>
+      </div>
+      <div class="contact-panel">
+        <a href="mailto:saikt1992@gmail.com">saikt1992@gmail.com</a>
+        <p>Available for websites, research visuals, AI portfolios, drone concepts, and content design.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2026 Sai Lab</span>
+    <a href="#top">Back to top</a>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
